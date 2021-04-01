@@ -1,4 +1,4 @@
-export type Coin = "nano" | "banano";
-
+export * from './rpc.types';
+export * from './nano.types';
 export * from './rpc';
-export * from './websocket';
+export * from './websocket.types';

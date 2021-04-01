@@ -1,3 +1,5 @@
+import {Block, ConfirmationType} from "./nano.types";
+
 export enum Topic {
   Confirmation = 'confirmation',
   Votes = 'votes',
@@ -42,18 +44,7 @@ export type ConfirmationMessage = ResponseMessage & {
     account: string,
     amount: string,
     hash: string,
-    confirmation_type: string,
-    block: {
-      type: string,
-      account: string,
-      previous: string,
-      representative: string,
-      balance: string,
-      link: string,
-      link_as_account: string,
-      signature: string,
-      work: string,
-      subtype: string
-    }
+    confirmation_type: ConfirmationType,
+    block: Block
   }
 }
